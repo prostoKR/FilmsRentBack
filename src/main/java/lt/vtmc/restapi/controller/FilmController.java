@@ -18,19 +18,20 @@ import lt.vtmc.restapi.model.Film;
 import lt.vtmc.restapi.model.Producer;
 import lt.vtmc.restapi.payload.FilmRequest;
 import lt.vtmc.restapi.repository.FilmRepository;
+//import lt.vtmc.restapi.repository.ProducerRepository;
 import lt.vtmc.restapi.repository.ProducerRepository;
 	
 	@CrossOrigin("*")
 	@RestController
 	@RequestMapping("/films")
-public class FilmController extends ProducerController {
+public class FilmController{
 	
 
 		@Autowired
 		private FilmRepository filmRepo;
 		
-//		@Autowired
-//		private ProducerRepository producerRepo;
+		@Autowired
+		private ProducerRepository producerRepo;
 	 
 		@GetMapping
 		public List<Film> getFilm() {
