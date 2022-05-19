@@ -24,7 +24,11 @@ import lt.vtmc.restapi.repository.ProducerRepository;
 	@CrossOrigin("*")
 	@RestController
 	@RequestMapping("/films")
+<<<<<<< HEAD
 public class FilmController{
+=======
+public class FilmController  {
+>>>>>>> ad0f6956bd2f397ae32f942ec7204311c8e926ef
 	
 
 		@Autowired
