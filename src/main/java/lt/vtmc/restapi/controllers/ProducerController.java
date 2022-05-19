@@ -1,4 +1,4 @@
-package lt.vtmc.restapi.controller;
+package lt.vtmc.restapi.controllers;
 
 import java.util.List;
 
