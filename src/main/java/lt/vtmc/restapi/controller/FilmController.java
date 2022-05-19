@@ -23,14 +23,14 @@ import lt.vtmc.restapi.repository.ProducerRepository;
 	@CrossOrigin("*")
 	@RestController
 	@RequestMapping("/films")
-public class FilmController extends ProducerController {
+public class FilmController  {
 	
 
 		@Autowired
 		private FilmRepository filmRepo;
 		
-//		@Autowired
-//		private ProducerRepository producerRepo;
+		@Autowired
+		private ProducerRepository producerRepo;
 	 
 		@GetMapping
 		public List<Film> getFilm() {
