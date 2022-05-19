@@ -14,8 +14,8 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
-import lt.vtmc.restapi.model.Film;
-import lt.vtmc.restapi.model.Producer;
+import lt.vtmc.restapi.models.Film;
+import lt.vtmc.restapi.models.Producer;
 import lt.vtmc.restapi.payload.FilmRequest;
 import lt.vtmc.restapi.repository.FilmRepository;
 //import lt.vtmc.restapi.repository.ProducerRepository;

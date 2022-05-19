@@ -14,10 +14,10 @@ import org.springframework.security.crypto.bcrypt.BCryptPasswordEncoder;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.security.web.authentication.UsernamePasswordAuthenticationFilter;
 
-import com.bezkoder.springjwt.security.jwt.AuthTokenFilter;
-
 import lt.vtmc.restapi.security.jwt.AuthEntryPointJwt;
+import lt.vtmc.restapi.security.jwt.AuthTokenFilter;
 import lt.vtmc.restapi.security.services.UserDetailsServiceImpl;
+
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(

@@ -1,4 +1,4 @@
-package lt.vtmc.restapi.model;
+package lt.vtmc.restapi.models;
 
 import javax.persistence.*;
 
