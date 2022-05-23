@@ -18,9 +18,13 @@ import org.springframework.web.bind.annotation.RequestBody;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RestController;
 
+import lt.vtmc.restapi.models.ERole;
+import lt.vtmc.restapi.models.Role;
+import lt.vtmc.restapi.models.User;
 import lt.vtmc.restapi.payload.LoginRequest;
 import lt.vtmc.restapi.payload.SignupRequest;
 import lt.vtmc.restapi.payload.response.JwtResponse;
+import lt.vtmc.restapi.payload.response.MessageResponse;
 import lt.vtmc.restapi.repository.RoleRepository;
 import lt.vtmc.restapi.repository.UserRepository;
 import lt.vtmc.restapi.security.jwt.JwtUtils;

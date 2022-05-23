@@ -21,8 +21,8 @@ import lt.vtmc.restapi.security.services.UserDetailsServiceImpl;
 @Configuration
 @EnableWebSecurity
 @EnableGlobalMethodSecurity(
-		// securedEnabled = true,
-		// jsr250Enabled = true,
+//		 securedEnabled = true,
+//		 jsr250Enabled = true,
 		prePostEnabled = true)
 public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 	@Autowired
@@ -51,9 +51,12 @@ public class WebSecurityConfig extends WebSecurityConfigurerAdapter {
 		http.cors().and().csrf().disable()
 			.exceptionHandling().authenticationEntryPoint(unauthorizedHandler).and()
 			.sessionManagement().sessionCreationPolicy(SessionCreationPolicy.STATELESS).and()
-			.authorizeRequests().antMatchers("/api/auth/**").permitAll()
-			.antMatchers("/api/test/**").permitAll()
-			.anyRequest().authenticated();
+			.authorizeRequests().antMatchers("/films/auth/**").permitAll()
+			.and().authorizeRequests().antMatchers("/h2-console/**").permitAll()
+			.antMatchers("/films/test/**").permitAll()
+			.anyRequest().authenticated()
+			.and().headers().frameOptions().sameOrigin()
+			.and().rememberMe();
 		http.addFilterBefore(authenticationJwtTokenFilter(), UsernamePasswordAuthenticationFilter.class);
 	}
 }
